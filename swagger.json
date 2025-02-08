@@ -1,0 +1,33 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "EcoTrack API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/api/auth/register": {
+        "post": {
+          "summary": "Registrar usuário",
+          "responses": {
+            "201": { "description": "Usuário registrado" }
+          }
+        }
+      },
+      "/api/auth/login": {
+        "post": {
+          "summary": "Login de usuário",
+          "responses": {
+            "200": { "description": "Token gerado" }
+          }
+        }
+      },
+      "/api/actions": {
+        "get": {
+          "summary": "Listar ações",
+          "security": [{ "bearerAuth": [] }],
+          "responses": { "200": { "description": "Lista de acções" } }
+        }
+      }
+    }
+  }
+  
